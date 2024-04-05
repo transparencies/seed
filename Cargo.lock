@@ -753,6 +753,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "equivalent"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
+
+[[package]]
 name = "errno"
 version = "0.2.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1297,9 +1303,9 @@ dependencies = [
 
 [[package]]
 name = "h2"
-version = "0.3.16"
+version = "0.3.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5be7b54589b581f624f566bf5d8eb2bab1db736c51528720b6bd36b96b55924d"
+checksum = "81fe527a889e1532da5c525686d96d4c2e74cdd345badf8dfef9f6b39dd5f5e8"
 dependencies = [
  "bytes 1.4.0",
  "fnv",
@@ -1307,7 +1313,7 @@ dependencies = [
  "futures-sink",
  "futures-util",
  "http",
- "indexmap",
+ "indexmap 2.2.6",
  "slab",
  "tokio",
  "tokio-util",
@@ -1322,6 +1328,12 @@ checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
 dependencies = [
  "ahash",
 ]
+
+[[package]]
+name = "hashbrown"
+version = "0.14.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
 
 [[package]]
 name = "headers"
@@ -1530,8 +1542,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1885e79c1fc4b10f0e172c475f458b7f7b93061064d98c3293e98c5ba0c8b399"
 dependencies = [
  "autocfg",
- "hashbrown",
+ "hashbrown 0.12.3",
  "serde",
+]
+
+[[package]]
+name = "indexmap"
+version = "2.2.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "168fb715dda47215e360912c096649d23d58bf392ac62f73919e831745e40f26"
+dependencies = [
+ "equivalent",
+ "hashbrown 0.14.3",
 ]
 
 [[package]]
@@ -2780,7 +2802,7 @@ dependencies = [
  "gloo-file",
  "gloo-timers",
  "gloo-utils",
- "indexmap",
+ "indexmap 1.9.2",
  "js-sys",
  "rand 0.8.5",
  "serde",
@@ -2944,7 +2966,7 @@ version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3511ae730f2e1c3d62a9025e2f9b2acbf130968057f1b3caab6d74a54a5e0e56"
 dependencies = [
- "hashbrown",
+ "hashbrown 0.12.3",
  "lock_api",
 ]
 
@@ -3207,7 +3229,7 @@ version = "0.1.0"
 dependencies = [
  "enclose",
  "gloo-storage",
- "indexmap",
+ "indexmap 1.9.2",
  "seed",
  "serde",
  "serde_json",
